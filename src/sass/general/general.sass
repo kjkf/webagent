@@ -2,23 +2,28 @@
 	&:focus, &:active
 		outline: none !important
 
+*,
+*::before,
+*::after
+	box-sizing: border-box
+
 html
 	//overflow: hidden
 	font-size: $fontSize_body
 
 body
 	font:
-		//family: $font-Roboto-Regular
+		family: $ptSansNarrowReg
 		size: 1rem
 		weight: 400
 	color: $fontColorMain
-	line-height: 1
+	line-height: $lineHeight_body
 	min-width: $phone-width-min
 	margin: 0
 	padding: 0
 	height: 100vh
 	background-color: $body_bg
-	+phone-down
+	//+phone-down
 		font-size: 12px
 
 h1, h2, h3, h4, p, ul
@@ -29,26 +34,10 @@ h1
 	font-size: $fontSize_h1
 	line-height: $lineHeight_h1
 	font-weight: normal
-	+phone-down
-    	font-size: 26px
 
 h2
 	font-size: $fontSize_h2
 	line-height: $lineHeight_h2
-	+phone-down
-		font-size: 20px
-
-h3
-	font-size: $fontSize_h3
-	line-height: $lineHeight_h3
-	+phone-down
-		font-size: 16px
-
-h4
-	font-size: $fontSize_h4
-	line-height: $lineHeight_h4
-	+phone-down
-		font-size: 16px
 
 
 .container
@@ -59,26 +48,11 @@ h4
 
 .title
 	color: $fontColorMain
-	//font-family: $font-Gilroy-ExtraBold
+	font-family: $ptSansNarrowBold
 
-.green
-	color: $green
-
-.bg--grey
-	background-color: $grey
-
-.blue-text
-	color: $blue-text
-
-.red-text
-	color: $red-text
 
 .bold-text
-	//font-family: $font-Gilroy-ExtraBold
-	font-weight: bold
-
-.red-text
-	color: $red-text
+	font-family: $ptSansNarrowBold
 
 
 .text-upper
@@ -88,3 +62,4 @@ h4
 	position: relative
 	&:hover
 		color: inherit
+
