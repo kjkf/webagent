@@ -1,0 +1,90 @@
+*
+	&:focus, &:active
+		outline: none !important
+
+html
+	//overflow: hidden
+	font-size: $fontSize_body
+
+body
+	font:
+		//family: $font-Roboto-Regular
+		size: 1rem
+		weight: 400
+	color: $fontColorMain
+	line-height: 1
+	min-width: $phone-width-min
+	margin: 0
+	padding: 0
+	height: 100vh
+	background-color: $body_bg
+	+phone-down
+		font-size: 12px
+
+h1, h2, h3, h4, p, ul
+	margin: 0px
+	padding: 0px
+
+h1
+	font-size: $fontSize_h1
+	line-height: $lineHeight_h1
+	font-weight: normal
+	+phone-down
+    	font-size: 26px
+
+h2
+	font-size: $fontSize_h2
+	line-height: $lineHeight_h2
+	+phone-down
+		font-size: 20px
+
+h3
+	font-size: $fontSize_h3
+	line-height: $lineHeight_h3
+	+phone-down
+		font-size: 16px
+
+h4
+	font-size: $fontSize_h4
+	line-height: $lineHeight_h4
+	+phone-down
+		font-size: 16px
+
+
+.container
+	+laptop
+		max-width: 1230px
+		padding-left: 30px
+		padding-right: 30px
+
+.title
+	color: $fontColorMain
+	//font-family: $font-Gilroy-ExtraBold
+
+.green
+	color: $green
+
+.bg--grey
+	background-color: $grey
+
+.blue-text
+	color: $blue-text
+
+.red-text
+	color: $red-text
+
+.bold-text
+	//font-family: $font-Gilroy-ExtraBold
+	font-weight: bold
+
+.red-text
+	color: $red-text
+
+
+.text-upper
+	text-transform: uppercase
+
+.btn
+	position: relative
+	&:hover
+		color: inherit
