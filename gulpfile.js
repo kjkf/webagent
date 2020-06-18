@@ -33,13 +33,13 @@ task('copy:assets', () => {
 
 task('copy:html', () => {
   return src('src/*.html')
-      .pipe(dest('dist/views'))
+      .pipe(dest('dist'))
       .pipe(reload({ stream: true }));
 });
 
 task('copy:php', () => {
     return src('src/*.php')
-        .pipe(dest('dist/views'))
+        .pipe(dest('dist'))
         .pipe(reload({ stream: true }));
 });
 
@@ -167,12 +167,6 @@ task('watch', () => {
 
 });
 //================================================================================================
-task('build-copy:html', () => {
-    return src('src/index.html')
-        .pipe(rename("views/index.ejs"))
-        .pipe(dest('dist'))
-        .pipe(reload({ stream: true }));
-});
 
 task(
     "default",
@@ -183,6 +177,6 @@ task(
 
 task(
     "build",
-    series('clean', parallel('build-copy:html', 'copy:php', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'copy:assets', 'styles', 'icons', 'scripts')
+    series('clean', parallel('copy:html', 'copy:php', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'copy:assets', 'styles', 'icons', 'scripts')
     )
 );
