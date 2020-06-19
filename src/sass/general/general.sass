@@ -39,16 +39,26 @@ h2
 	font-size: $fontSize_h2
 	line-height: $lineHeight_h2
 
+a
+	color: inherit
+	text-decoration: none
 
 .container
-	+laptop
+	margin: 50px auto
+	max-width: 1470px
+	padding-left: 30px
+	padding-right: 30px
+	+laptop-down
 		max-width: 1230px
-		padding-left: 30px
-		padding-right: 30px
+
 
 .title
-	color: $fontColorMain
+	color: $aqua
 	font-family: $ptSansNarrowBold
+	text-align: center
+
+h2
+	margin-bottom: 50px
 
 
 .bold-text
@@ -63,3 +73,7 @@ h2
 	&:hover
 		color: inherit
 
+.bg-navy
+	background-color: $navy
+	.title
+		color: #FFFFFF
