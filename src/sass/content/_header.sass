@@ -1,5 +1,6 @@
 .header
   height: 100vh
+  //padding-top: 14px
   .container
     height: 100%
     padding-top: 0px
@@ -9,11 +10,18 @@
 .header-top
   display: flex
   justify-content: flex-end
-  padding-top: 24px
+  padding: 6px 0 7px
   position: relative
   background-color: $navy
+  position: fixed
+  max-width: 100%
+  width: 100%
+  left: 0
+  z-index: 100
   +laptop-down
     justify-content: center
+  +phone-down
+    position: static
 
 .menu-item
   display: inline-block
@@ -60,20 +68,27 @@ h1 span
 
 .menu
   width: 100%
+  max-width: 1470px
+  margin: 0 auto
+  padding: 0 30px
+  display: flex
+  justify-content: flex-end
   +phone-down
+    display: block
     position: absolute
     width: 100%
     right: 0
     z-index: 100
     text-align: right
+    padding: 0 10px
   .nav
     border: 2px solid #4095b4
     +phone-down
       border-width: 0px
   .menu-wrap
-    position: fixed
-    transition: top 1s ease-out 0.5s
-    z-index: 100
+    //position: fixed
+    //transition: top 1s ease-out 0.5s
+    //z-index: 100
     //height: $nav_h
     background-color: $navy
     text-align: right
