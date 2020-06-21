@@ -12,16 +12,22 @@
     <div class="container">
         <div class="header-top">
             <nav class="menu">
-                <ul class="menu-list">
-                    <li class="menu-item"><a href="#" class="menu-link">О нас</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Мы умеем</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Наши работы</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Связаться с нами</a></li>
-                </ul>
+                <button type="button" class="btn btn-gamburg" id="btn_gamburg"></button>
+                <div class="menu-wrap">
+                    <button type="button" class="btn btn-close" id="btn_close"></button>
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#" class="menu-link">О нас</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Мы умеем</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Наши работы</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Связаться с нами</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
         <h1 class="title logo">
-            <img src="public/images/content/logo.svg" alt="Web Agent">
+            <div class="logo-img">
+                <img src="public/images/content/logo.svg" alt="Web Agent">
+            </div>
             <span>Команда профессиональных верстальщиков</span>
         </h1>
     </div>
@@ -87,14 +93,79 @@
         <h2 class="title">Наши работы</h2>
         <div class="our-works-wrap">
             <div class="our-works-item">
-                <div class="our-works-img"><img src="#" alt="work-1"></div>
-                <p class="our-works-info">
-
-                </p>
+                <div class="our-works-img"><img src="public/images/content/oimo_project.png" alt="work-1"></div>
+                <div class="our-works-info">
+                    <h4 class="title">Наименование работы</h4>
+                    <p>
+                        <span>Краткое описание работы</span>
+                        <span>Краткое описание работы</span>
+                    </p>
+                    <p>Срок реализации</p>
+                </div>
+            </div>
+            <div class="our-works-item">
+                <div class="our-works-img"><img src="public/images/content/oimo_project.png" alt="project-1"></div>
+                <div class="our-works-info">
+                    <h4 class="title">Наименование работы</h4>
+                    <p>
+                        <span>Краткое описание работы</span>
+                        <span>Краткое описание работы</span>
+                    </p>
+                    <p>Срок реализации</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<footer class="footer bg-navy">
+    <div class="container">
+        <h2 class="title">Связаться  с нами</h2>
+        <p>Напишите нам и мы просчитаем стоимость верстки Вашего макета или ответим на Ваши вопросы.</p>
+        <form class="appl-form">
+            <div class="appl-form-wrap">
+                <div class="appl-form-left">
+                    <div class="input-wrap">
+                        <label class="input-label">Ваше имя:</label>
+                        <input type="text" placeholder="Имя" class="input-field">
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label">Ваш e-mail:</label>
+                        <input type="email" placeholder="e-mail" class="input-field">
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label">Файл:</label>
+                        <label for="upload_input" class="input-upload input-field">
+                            <span class="input-upload-val">Загрузить файл</span>
+                            <span class="input-upload-btn">Загрузить</span>
+                            <input type="file" id="upload_input">
+                        </label>
+                        <span class="sm-text">*Здесь вы можете приложить техническое задание или макет </span>
+                    </div>
+                </div>
+                <div class="appl-form-right">
+                    <div class="input-wrap">
+                        <label class="input-label">Тема:</label>
+                        <div class="input-select">
+                            <select>
+                                <option value="0">Калькуляция стоимости</option>
+                                <option value="1">1000</option>
+                                <option value="2">2000</option>
+                                <option value="3">3000</option>
+                                <option value="4">4000</option>
+                                <option value="5">5000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label">Ваше сообщение:</label>
+                        <textarea cols="10" rows="3" class="input-field" placeholder="Сообщение"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-sumbit">Отправить</button>
+            </div>
+        </form>
+    </div>
+</footer>
 <script src="../public/main.min.js"></script>
 </body>
 </html>

@@ -2,24 +2,37 @@
   height: 100vh
   .container
     height: 100%
-    margin-top: 0px
-    margin-bottom: 0px
+    padding-top: 0px
+    padding-bottom: 0px
 
 
 .header-top
   display: flex
   justify-content: flex-end
   padding-top: 24px
+  position: relative
+  background-color: $navy
+  +laptop-down
+    justify-content: center
 
 .menu-item
   display: inline-block
   margin-right: 30px
+  +phone-down
+    display: block
+    margin-right: 0px
+    margin-bottom: 10px
+    font-size: 26px
   &:last-child
     margin-right: 0px
+    +phone-down
+      margin-bottom: 0px
 
 .menu-link
   font-size: 34px
   line-height: 1.3
+  +laptop-down
+    font-size: 26px
   &:hover, &:active
     text-decoration: underline
 
@@ -29,10 +42,60 @@
   justify-content: center
   flex-direction: column
   align-items: center
+  &-img
+    width: 412px
+    +phone-down
+      width: 250px
+    img
+       width: 100%
+       height: auto
+
 
 h1 span
   font-size: $fontSize_body
   line-height: $lineHeight_body
   font-family: $ptSansNarrowReg
+  +phone-down
+    font-size: 15px
 
+.menu
+  width: 100%
+  +phone-down
+    position: absolute
+    width: 100%
+    right: 0
+    z-index: 100
+    text-align: right
+  .nav
+    border: 2px solid #4095b4
+    +phone-down
+      border-width: 0px
+  .menu-wrap
+    position: fixed
+    transition: top 1s ease-out 0.5s
+    z-index: 100
+    //height: $nav_h
+    background-color: $navy
+    text-align: right
 
+    +phone-down
+      display: none
+      margin-top: -70px
+      position: fixed
+      right: 0px
+      width: 100%
+      min-height: 246px
+      padding: 50px 30px 30px
+      //width: 217px
+
+  &.active
+    width: 100%
+    .menu-wrap
+      display: block
+      opacity: 1
+      transition: opacity 12s
+
+.menu-list
+  text-align: left
+  
+  

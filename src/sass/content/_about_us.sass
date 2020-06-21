@@ -6,6 +6,8 @@
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    +phone-down
+      justify-content: center
 
   &-item
     width: 330px
@@ -14,8 +16,19 @@
     padding: 50px 22px
     text-align: center
     margin-bottom: 30px
+    +laptop-down
+      padding: 20px 16px
+      width: 230px
+      min-width: 230px
+    +phone-down
+      padding: 10px 20px
+      margin-bottom: 5px
 
   &-title
     display: block
     font-size: 60px
     font-family: $ptSansNarrowBold
+    +laptop-down
+      font-size: 40px
+    +phone-down
+      font-size: 26px

@@ -1,0 +1,36 @@
+.our-works
+  &-wrap
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    +laptop-down
+      justify-content: center
+  &-item
+    padding: 10px
+    background-color: $aqua
+    min-width: 690px
+    width: 690px
+    +phone-down
+      width: 100%
+      min-width: unset
+  &-img
+    width: 100%
+    img
+      width: 100%
+      height: auto
+  &-info
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    font-size: 26px
+    line-height: 1.3
+    +phone-down
+      font-size: 16px
+    .title
+      margin-bottom: 10px
+      color: #FFFFFF
+    p
+      margin-bottom: 10px
+    span
+      display: block

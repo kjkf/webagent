@@ -23,8 +23,12 @@ body
 	padding: 0
 	height: 100vh
 	background-color: $body_bg
-	//+phone-down
-		font-size: 12px
+	+laptop-down
+		font-size: $fontSize_body_laptop
+	+tablet-down
+		font-size: $fontSize_body_tablet
+	+phone-down
+		font-size: $fontSize_body_mob
 
 h1, h2, h3, h4, p, ul
 	margin: 0px
@@ -38,18 +42,30 @@ h1
 h2
 	font-size: $fontSize_h2
 	line-height: $lineHeight_h2
+	+laptop-down
+		font-size: $fontSize_h2_tablet
+	+phone-down
+		font-size: $fontSize_h2_mob
+
+h4
+	font-size: $fontSize_h4
+	line-height: $lineHeight_h4
+	+phone-down
+		font-size: $fontSize_h4_mob
 
 a
 	color: inherit
 	text-decoration: none
 
 .container
-	margin: 50px auto
+	margin: 0 auto
 	max-width: 1470px
-	padding-left: 30px
-	padding-right: 30px
+	padding: 50px 30px
 	+laptop-down
 		max-width: 1230px
+		padding: 30px 20px
+	+phone-down
+		padding: 20px 10px
 
 
 .title
@@ -57,8 +73,10 @@ a
 	font-family: $ptSansNarrowBold
 	text-align: center
 
-h2
+h2.title
 	margin-bottom: 50px
+	+phone-down
+		margin-bottom: 10px
 
 
 .bold-text
@@ -70,6 +88,10 @@ h2
 
 .btn
 	position: relative
+	display: inline-block
+	width: 100%
+	font-size: 26px
+	font-family: $ptSansNarrowBold
 	&:hover
 		color: inherit
 
@@ -77,3 +99,42 @@ h2
 	background-color: $navy
 	.title
 		color: #FFFFFF
+
+.sm-text
+	font-size: 16px
+	line-height: 1.3
+
+.btn-close
+	padding: 0px
+	width: 15px
+	height: 15px
+	border-radius: 0px
+	border: 0px
+	box-shadow: none
+	background-color: transparent
+	background-image: url(../images/icons/ic-close.svg)
+	background-repeat: no-repeat
+	background-position: center
+	display: none
+	+phone-down
+		display: inline-block
+
+.btn-gamburg
+	width: 30px
+	height: 15px
+	margin-left: auto
+	margin-right: 15px
+	border-width: 0px
+	background:
+		color: transparent
+		image: url("../images/icons/ic-menu.svg")
+		repeat: no-repeat
+		size: contain
+		position: center
+	&:hover, &:active
+		color: #FFFFFF
+	display: none
+	+phone-down
+		display: inline-block
+
+

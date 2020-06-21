@@ -1,0 +1,90 @@
+.footer
+  .input-wrap
+    margin-bottom: 20px
+  p
+    text-align: center
+    margin-bottom: 20px
+    +phone-down
+      text-align: left
+
+.appl-form-left, .appl-form-right
+  width: 46.3%
+  +phone-down
+    width: 100%
+
+.input-label
+  font-size: 26px
+  font-family: $ptSansNarrowBold
+  color: #FFFFFF
+  display: block
+  +phone-down
+    font-size: 20px
+
+.input-field
+  width: 100%
+  font-size: 26px
+  color: #FFFFFF
+  background: $violet
+  border: 0.5px solid #FFFFFF
+  border-radius: 5px
+  padding: 6px 15px
+  +phone-down
+    font-size: 20px
+  +placeholder
+    font-size: 26px
+    color: #FFFFFF
+
+.input-upload
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  cursor: pointer
+  input[type="file"]
+    position: absolute
+    width: 1px
+    height: 1px
+    padding: 0
+    margin: -1px
+    overflow: hidden
+    clip: rect(0,0,0,0)
+    border: 0
+  &-btn
+    background: #041C59
+    box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25)
+    border-radius: 5px
+    width: 100px
+    height: fit-content
+    padding: 5px 15px
+    font-size: 20px
+    line-height: 26px
+    text-align: center
+    color: #FFFFFF
+
+.input-select
+
+
+textarea.input-field
+    min-height: 144px
+    resize: none
+
+.btn-sumbit
+  background: #C29230
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25), inset 0px 4px 4px rgba(255, 255, 255, 0.25)
+  border-radius: 5px
+  color: #041C59
+  padding: 10px
+
+.appl-form-wrap
+  width: 66%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  +laptop-down
+    width: 96.5%
+  +phone-down
+    flex-direction: column
+
+.appl-form
+  display: flex
+  justify-content: center
